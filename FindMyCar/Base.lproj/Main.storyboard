@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DudeCarLogo" translatesAutoresizingMaskIntoConstraints="NO" id="m84-Sw-3Nc">
-                                <rect key="frame" x="418" y="72" width="174" height="80"/>
+                                <rect key="frame" x="10" y="500" width="174" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="174" id="LGD-2r-q2C"/>
                                     <constraint firstAttribute="height" constant="80" id="u4p-yu-FiQ"/>
@@ -48,10 +48,10 @@
                         <constraints>
                             <constraint firstItem="eEf-FE-MUg" firstAttribute="leading" secondItem="uf4-WE-mEu" secondAttribute="leading" id="6rn-hx-cgO"/>
                             <constraint firstItem="eEf-FE-MUg" firstAttribute="centerX" secondItem="uf4-WE-mEu" secondAttribute="centerX" id="8yp-j0-UFP"/>
-                            <constraint firstItem="m84-Sw-3Nc" firstAttribute="top" secondItem="RhG-A8-vce" secondAttribute="bottom" constant="8" id="K9M-TT-GpR"/>
+                            <constraint firstItem="hOn-Om-4dz" firstAttribute="top" secondItem="m84-Sw-3Nc" secondAttribute="bottom" constant="20" id="GhX-eF-yoj"/>
+                            <constraint firstItem="m84-Sw-3Nc" firstAttribute="leading" secondItem="uf4-WE-mEu" secondAttribute="leading" constant="10" id="KVl-2H-fL3"/>
                             <constraint firstItem="eEf-FE-MUg" firstAttribute="top" secondItem="RhG-A8-vce" secondAttribute="bottom" id="X7R-Yq-nBS"/>
                             <constraint firstAttribute="trailing" secondItem="eEf-FE-MUg" secondAttribute="trailing" id="kkZ-VO-WMC"/>
-                            <constraint firstAttribute="trailing" secondItem="m84-Sw-3Nc" secondAttribute="trailing" constant="8" id="nhk-Xp-Sd7"/>
                             <constraint firstItem="hOn-Om-4dz" firstAttribute="top" secondItem="eEf-FE-MUg" secondAttribute="bottom" id="vVZ-r3-CbX"/>
                         </constraints>
                     </view>
