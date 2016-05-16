@@ -62,9 +62,15 @@
                                 <action selector="addMyCar:" destination="ORZ-OO-Rcc" id="8hx-ge-ZdE"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="View: Map" id="smF-oV-P0Q">
+                            <connections>
+                                <action selector="changeMapView:" destination="ORZ-OO-Rcc" id="Lfn-cH-sfB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="eEf-FE-MUg" id="Hx9-Yl-vff"/>
+                        <outlet property="mapViewButton" destination="smF-oV-P0Q" id="lm7-P9-Mae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6l-wD-qTX" userLabel="First Responder" sceneMemberID="firstResponder"/>

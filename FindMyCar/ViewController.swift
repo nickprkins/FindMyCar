@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    @IBOutlet weak var mapViewButton: UIBarButtonItem!
 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
@@ -42,6 +43,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.mapType = MKMapType(rawValue: 0)!
+        
         mapView.userTrackingMode = MKUserTrackingMode(rawValue: 1)!
         
     }
@@ -93,6 +95,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Change Map view between Map and Satellite
+    @IBAction func changeMapView(sender: AnyObject) {
+        
+        if mapViewButton.title == "View: Satellite" {
+            mapView.mapType = MKMapType(rawValue: 0)!
+            mapViewButton.title = "View: Map"
+        }else if(mapViewButton.title == "View: Map"){
+            mapView.mapType = MKMapType(rawValue: 4)!
+            mapViewButton.title = "View: Satellite"
+        }
+    }
+    
     
     // MARK: - MapView Delegate
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
