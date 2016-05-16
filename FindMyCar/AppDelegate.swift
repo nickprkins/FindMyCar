@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // RAN OUT OF TIME TO GET NSCODING FULLY WORKING IN PROJECT
+//        let nickUser : UserProfile = UserProfile(name: "Nick", userID: "cowlickninja", password: "12345", profile: NSURL(string: "https://www.google.com")!)
+//        
+//        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        
         return true
     }
 

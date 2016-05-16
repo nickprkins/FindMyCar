@@ -45,7 +45,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         mapView.userTrackingMode = MKUserTrackingMode(rawValue: 1)!
         
     }
-
+    
+    // When the navigation car button is hit a annotation is placed on the map.
     @IBAction func addMyCar(sender: AnyObject) {
         
         let location = CLLocationCoordinate2DMake(locationManager!.location!.coordinate.latitude, locationManager!.location!.coordinate.longitude)
@@ -53,12 +54,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
         annotation.title = "Dude..Sweet..My Car!"
-        annotation.subtitle = "Your car is here dude. Be sober dude!"
-//        annotation.image = UIImage (named: "mapSmallIconRed")
+        annotation.subtitle = "Your car is here dude!"
     
-        
-        //mapView(mapView, viewForAnnotation: annotation)!.annotation = annotation
-        
         mapView.addAnnotation(annotation)
 
     }
@@ -76,6 +73,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 var area = [oldCoordinates, newCoordinates]
                 let polyline = MKPolyline(coordinates: &area, count: area.count)
                 mapView.addOverlay(polyline)
+//                arrivedAtCar(newLocation)
             }
         }
     
@@ -117,5 +115,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
 }
 
+// Want to add feature that will notify user when they are near their car.
+//func arrivedAtCar(sender: AnyObject) {
+//    
+//    var current : CLLocation!
+//    var carAnnotation : CLLocation!
+//    
+//    if current .distanceFromLocation(carAnnotation) > 1000 {
+//        current = CLLocation (latitude: current.coordinate.latitude, longitude: current.coordinate.longitude)
+//        carAnnotation = CLLocation (latitude: carAnnotation.coordinate.latitude, longitude: carAnnotation.coordinate.longitude)
+//    }else{
+//        let alertController = UIAlertController(title: "Dude Your Car!", message: "You found your car, well done", preferredStyle: .Alert)
+//        let OKAction = UIAlertAction(title: "OK", style: .Default, handler: { (action) in
+//            
+//        })
+//        alertController.addAction(OKAction)
+//    }
+//    
+//}
 
 
